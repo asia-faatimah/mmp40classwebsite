@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice 11</title>
+    <style>
+        nav li img{
+            float: right;
+            width: 15px;
+    
+        }
+        nav ul{
+            padding: 0;
+            list-style-type: none;
+        }
+        nav a {
+            display: block;
+            padding: 1em;
+            background-color: #ccc;
+            border-bottom: solid 1px #666;
+            color: black;
+            text-decoration: none;
+        }
+        nav li li a {
+            background-color: #999;
+            color: white;
+        }
+        nav a:hover{
+            background-color: aqua;
+        }
+        nav li ul{
+            display: none;
+        }
+        nav li:hover ul{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="">Fruits<img src="https://img.icons8.com/ios-filled/26/000000/chevron-down.png"/></a>
+                <ul>
+                    <li><a href="">Bluberries</a></li>
+                    <li><a href="">Strawberries</a></li>
+                    <li><a href="">Apples</a></li>
+                </ul>
+            </li>
+            <li><a href="">Vegetables<img src="https://img.icons8.com/ios-filled/26/000000/chevron-down.png"/></a>
+            <ul>
+                <li><a href="">Cabbage</a></li>
+                <li><a href="">Squash</a></li>
+                <li><a href="">Zucchini</a></li>
+            </ul>
+        </li>
+        </ul>
+
+    </nav>
+    
+</body>
+</html>

@@ -1,0 +1,84 @@
+.wrapper{
+    font-family:Poppins, sans-serif;
+    color: #757087;
+}
+.mainflex-container{
+    height: 300px;
+    background: #E1E4E9;
+    
+}
+.flex_cookieinfo{
+    padding: 2em;
+    width: 600px;
+    
+}
+.flex_cookieinfo p{
+    margin-bottom: 2em;
+}
+/*
+nav{
+    position: absolute;
+    width: 1366px;
+    height: 325px;
+    left: 0px;
+    top: 94px;
+    background: #E1E4E9
+}
+*/
+nav{
+    top:0 ;
+    left:0 ;
+    right: 0;
+    height: 85px;
+    padding: 0 25px 0 25px;
+    background-color: white;
+
+
+
+}
+
+
+.flex_container2{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-top: 1vh;
+    padding-left: 20px;
+
+}
+
+#logo{
+    position: absolute;
+    height: 70.77px;
+    left: 0px;
+    top: 13px;
+}
+h1{
+    
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 50px;
+    color: #8671AC;
+
+}
+.btn-cookiepdf{
+    
+    color:#8671AC;
+    text-decoration: none;
+    border: 2px solid #8671AC;
+    border-radius: 20px;
+    padding: 10px;
+}
+.btn-cookiepdf:hover{
+    background-color:#F9AF60;
+    color: white;
+}
+.flex_cookieimg{
+    margin-left: 40em;
+    width: 350px;
+    margin-top: -300px;
+
+}
+footer{
+    padding: 10px;
+}

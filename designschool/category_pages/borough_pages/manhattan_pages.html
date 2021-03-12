@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="queens_pages.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,700;0,900;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"> 
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://kit.fontawesome.com/yourcode.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+ <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,800;0,900;1,800;1,900&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,700;0,900;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+   
+    <title>Manhattan</title>
+</head>
+<body>
+    <!---This template used for all card category pages  div was switched to section *remember for css*-->
+    <div id="wrapper">
+<!---body wrapper max 1200p
+x should be able to use index.css remember selector might be renamed---------->
+<header>
+    <nav class="topnav">
+        <ul>
+            <li class="logo"><a href="../../index.html"><img src="../../../assets/logo_color2.png" alt=""></li>
+            <li class="btn"><span class="fas fa-bars"></span></li>
+            <script>
+                $('nav ul li.btn span').click(function(){
+                $('nav ul div.items').toggleClass("show");
+                $('nav ul li.btn span').toggleClass("show");
+    
+                });
+            </script>
+            <div class="items">
+                <li><a href= "https://www.cuny.edu/about//" >About Cuny</a></li>
+                <li><a href="https://www.cuny.edu/financial-aid/">Financial Aid</a></li>
+                <li><a href="https://www.cuny.edu/admissions/apply-to-cuny/">Apply</a></li>
+            </div>
+            <li class="search-icon">
+                <input type="search" placeholder="Search">
+                <label class="icon">
+                <span class="fas fa-search"></span>
+                </label>
+            </li>
+        </ul>
+
+    </nav>
+  
+<!-----------------------------Search Programs Section ------------------------------------------------------->
+<section class="search-programs">
+    <h2>Find a Design Program</h2>
+    <h3 class="search-subtitle">Search by:</h3>
+    <nav class="search-nav">
+        <ul>
+            <li class="select-item"><a href="#">Borough<i class="fa fa-caret-down" aria-hidden="true"></i></a>
+                <ul>
+                    <li><a href="bronx_pages.html">Bronx</a></li>
+                    <li><a href="brooklyn_pages.html">Brooklyn</a></li>
+                    <li><a href="#">Manhattan</a></li>
+                    <li><a href="queens_pages.html">Queens</a></li>
+                </ul>
+            </li>
+          <li class="select-item"><a href="#">Degree<i class="fa fa-caret-down" aria-hidden="true"></i></a>
+            <ul>
+              <li><a href="../degree_pages/associates_page.html">Associate</a></li>
+              <li><a href="../degree_pages/bachelors_page.html">Bachelors</a></li>
+            </ul>    
+          </li>
+          <li class="select-item"><a href="#">Discipline<i class="fa fa-caret-down" aria-hidden="true"></i></a>
+            <ul>
+              <li ><a href="../discipline_pages/animation_pages.html">Animation</a></li>
+              <li><a href="../discipline_pages/digitalDesign_pages.html">Digital Design</a></li>
+              <li><a href="../discipline_pages/industrialDesign_pages.html">Industrial Design</a></li>
+            </ul>  
+          </li>
+        </ul>
+      </nav>
+
+</div>
+</section>
+
+</header>
+<section class="card-container">
+    <div class="card-item"><!-- start card div -->
+        <a href="https://www.baruch.cuny.edu/confluence/pages/viewpage.action?pageId=24052375#DepartmentofFineandPerformingArts-major" class="card-link">
+
+            <div class="card">
+              <img src="../../../assets/baruch.jpg" alt="#">
+              <div class="card-body">
+                <h3>Baruch College</h3>
+                <h2>Digital Design</h2>
+                <h4>Degree: B.A.</h4>
+                <p>The graphic communication specialization provides training in graphics as well as basic training in the broader aspects of business communication. It prepares the graphic artist to enter a business environment. </p>
+            </div>
+           </div> <!-- closing card div -->
+            
+          </a>
+    </div>
+    <div class="card-item"><!-- start card div -->
+        <a href="https://www.bmcc.cuny.edu/academics/departments/media-arts-and-technology/animation-and-motion-graphics/" class="card-link">
+
+            <div class="card">
+              <img src="../../../assets/bmcc.jpg" alt="#">
+              <div class="card-body">
+                <h3>Borough of Manhattan Community College</h3>
+                <h2>Animation</h2>
+                <h4>Degree: A.S.</h4>
+                <p>The Animation and Motion Graphics program provides students with the fundamentals of two- and three-dimensional (2D and 3D) animation, motion graphics, and special effects for advertising campaigns, video games, movies, and television.</p>
+            </div>
+           </div> <!-- closing card div -->
+            
+          </a>
+    </div>
+    <div class="card-item"><!-- start card div -->
+        <a href="https://www.bmcc.cuny.edu/academics/departments/media-arts-and-technology/multimedia-programming-and-design/" class="card-link">
+
+            <div class="card">
+              <img src="../../../assets/bmcc.jpg" alt="#">
+              <div class="card-body">
+                <h3>Borough of Manhattan Community College</h3>
+                <h2>Digital Design</h2>
+                <h4>Degree: A.S.</h4>
+                <p>The Multimedia Programming and Design Program prepares students for careers in a variety of multimedia industries, companies and institutions that develop, produce or market multimedia products, programs or services.</p>
+            </div>
+           </div> <!-- closing card div -->
+            
+          </a>
+    </div>
+    <div class="card-item"><!-- start card div -->
+        <a href="https://edm.arts.ccny.cuny.edu/" class="card-link">
+
+            <div class="card">
+              <img src="../../../assets/citycollege.jpg" alt="#">
+              <div class="card-body">
+                <h3>The City College of New York</h3>
+                <h2>Digital Design</h2>
+                <h4>Degree: B.F.A. </h4>
+                <p>The Electronic Design & Multimedia prepares students for careers in design in traditional print and emerging electronic media. It offers one of the most comprehensive, affordable 4-year programs in electronic art at a New York City public university, and has a 18-year record of alumni success.</p>
+            </div>
+           </div> <!-- closing card div -->
+            
+          </a>
+    </div>
+   
+
+</section>
+    </div>
+</body>
+</html>

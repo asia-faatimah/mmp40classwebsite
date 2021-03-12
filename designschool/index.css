@@ -1,0 +1,772 @@
+  /*---------------------COLORS EXTRACTED SAVED INTO ADOBE LIB--------------------------------------------------------
+        #F291BF -PINK
+        #F2059F -DARK PINK
+        #757087 -GREY
+        #141640 -DARK NAVY
+        #7EC8D9 -LIGHT BLUE
+        #F2C1AE -PEACH
+        ----------------------------------------------TrashCan----------------------------------------------------------
+        background: rgb(251,250,255);
+        background: radial-gradient(circle, rgba(251,250,255,1) 0%, rgba(228,228,246,1) 35%, rgba(243,253,255,1) 100%);
+        */
+        body {
+            position: cover;
+            
+            box-sizing: border-box;
+            }
+            :root {
+            --primary: #fbf9ff;
+            --secondary: #d4d9e2;
+            }
+            #wrapper{
+                max-width: 1200px;
+                margin: auto;
+                font-family: 'Poppins', sans-serif;
+                
+            }
+            h1, h2, h3, h4{
+                font-weight: bold;
+            }
+        
+            p, h1, h2, h3, h4{
+            margin-bottom: 1em;
+            }
+
+            a{
+                text-decoration: none;
+                color: #757087;
+                
+            }
+    
+            .menu{
+                display: none;
+                margin-bottom: 6em;
+            }
+        
+        /*---------------------------------------------------------------------------------------
+                                                 Nav Styling
+    
+    
+        ---------------------------------------------------------------------------------------*/
+        header .topnav{
+            background: white;
+            padding: 10px 40px 10px 70px;
+            border: 1px solid whitesmoke;
+            border-left: none;
+            border-right: none;
+        }
+        nav ul{
+            display: flex;
+            list-style: none;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+        nav ul li.logo{
+            flex: 1;
+            font-size: 30px;
+            font-weight: 700;
+            margin-left: -67px;
+            /*----------check svg pushing width logo should be -45px--------------*/
+    
+        }
+        nav ul div.items{
+            padding: 0 25px;
+            display: inline-flex;
+        }
+        nav ul div.items a{
+            text-decoration: none;
+            font-size: 18px;
+            padding: 0 12px;
+            color: #0c0c0c;
+    
+        }
+        nav ul div.items a:hover{
+            color:grey;
+        }
+        nav ul .search-icon{
+            height: 40px;
+            width:240px ;
+            display: flex;
+            background: #f2f2f2;
+            border-radius: 5px;
+    
+    
+         }
+         nav ul .search-icon input{
+             height: 100%;
+             width: 200px;
+             border: 1px grey solid;
+             outline: none;
+             padding: 0 10px;
+             color: grey;
+             font-size: 16px;
+             border-radius: 5px 0 0 5px;
+         }
+         nav ul .search-icon .icon{
+             height: 95%;
+             width: 40px;
+             line-height: 40px;
+             text-align: center;
+             border: 1px solid #b9b5b5;
+             border-radius: 0 5px 5px 0;
+             cursor: pointer;
+         }
+         nav ul .search-icon .icon:hover{
+             background:#e6e6e6;
+         }
+         nav ul .search-icon .icon span{
+             color: #222222;
+             font-size: 18px;
+         }
+         nav ul li.btn{
+             font-size: 29px;
+             flex: 1;
+             padding: 0 40px;
+             color: red;
+             display: none;
+         }
+         nav ul li.btn span{
+             height: 42px;
+             width: 42px;
+             text-align: center;
+             line-height:42px ;
+             border: 1px solid #151515;
+             border-radius: 5px;
+             cursor: pointer;
+             
+         } 
+         nav ul li.btn span.show:before{
+             content: '\f00d';
+         }
+         @media screen and (max-width: 1052px){
+             nav{
+                 padding: 10px 40px 10px 0px;     
+            }
+             nav ul li.logo{
+                 display:none ;
+             }     
+             nav ul div.items{
+                 flex: 4;
+    /*--------------------2nd breakpoint----------------*/
+             }
+            } @media screen and (max-width: 768px){
+                nav ul li.btn{
+                 display:block;
+             } 
+        
+                nav{
+                z-index: 1;
+                 padding: 10px 40px 10px 0px; 
+            }
+             nav ul li.logo{
+                 display:none ;
+             }     
+             nav ul div.items{
+                z-index: -1;
+                 position: fixed;
+                 top: -220px;
+                 right: 0;
+                 width: 100%;
+                 background: #222222;
+                 display: inline-block;
+                 transition: top .4s;
+             }
+             nav ul div.items.show{
+                 top: 60px;
+             }
+             nav ul div.items li{
+                 text-align: center;
+                 line-height: 30px;
+                 margin: 30px 0;
+             }
+             nav ul div.items li a{
+                 font-size: 19px;
+             }
+            }
+        /*--------------------------------------------------------------------------------------------------------
+
+                                                     Select Dropdown with category selection
+     
+        -------------------------------------------------------------------------------------------------------*/
+
+        /*Selection animation image*/
+            /* border-radius: 6px;*/
+            .search-programs{
+                color: white;
+                padding: 2em;
+                justify-content: space-evenly;
+                height: 50vh;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image:linear-gradient(to bottom, rgba(20, 21, 29, 0.679), rgba(95, 17, 73, 0.73)), url(../assets/college1.jpg);
+                background-color: rgba(0,0,0,.8);
+                animation-name: change;
+                animation-duration: 10s;
+                animation-iteration-count: infinite;
+                
+                
+            }
+            @keyframes change {
+
+                from {background-image:linear-gradient(to bottom, rgba(63, 27, 67, 0.679), rgba(9, 2, 7, 0.73)),url(../assets/college2.jpg);
+                background-color: rgba(0, 0, 0, 0.337);}
+                to {background-image:linear-gradient(to bottom, rgba(22, 23, 26, 0.583), rgba(87, 19, 70, 0.73)),url(../assets/college4.jpg);
+                background-color: rgba(0, 0, 0, 0.371)}
+                }
+            /*
+            .search-programs ul{
+                display: inline-block;
+            }
+            changes to vertical flow with black
+
+            /*might not be taking effect edit css*/
+            .search-programs h2{
+                font-size: 48px;
+                text-align: center;
+                margin-bottom: 1em;
+
+            }
+            .search-subtitle{
+                font-size: 24px;
+                font-weight: 400;
+                text-align: center;
+                padding: 2em;
+
+            }
+            .search-nav ul{
+                display: flex;
+                justify-content: space-evenly;
+            }
+            .search-nav ul{
+                display: flex;
+                justify-content: space-evenly;
+    
+            }
+            .search-programs h2, h3{
+                color:white;
+            }
+            .search-programs h2{
+            font-size:48px ;
+            text-align: center;
+
+            }
+            .search-programs nav i{
+                margin-left: 1em;
+            }
+
+            .search-programs  a {
+            display: block;
+            color: black;
+            opacity:1;
+            text-decoration:none;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 300;
+            
+
+            }
+    
+            .search-programs nav li a:hover{
+            background-color:rgba(28, 27, 27, 0.83);
+            color:white;
+            font-weight: 600;
+            
+            
+            }
+    
+            .search-programs nav li ul{
+            display:none;
+            
+            
+            }
+            .search-programs li:hover ul{
+            display:block;
+            
+            }
+            .search-programs nav li a{
+                display:block;
+                border: 2px solid white;
+                color: white;
+                border-radius: 30px;
+                padding:1em;
+                opacity: 1;
+                font-weight: 600;
+            }
+            .search-programs nav li li a{
+                color:black;
+                opacity: 1;
+                font-weight: 400;
+                border-radius: 10px;
+                background-color:rgba(218, 213, 213, 0.987);
+            
+            }
+            .select-item a{
+                margin-bottom: .5em;
+                
+            }
+ /*---------breakpoint start---for search programs-----------------------------------------------------------------------------------*/   
+            @media(min-width:768px){
+            
+            .search-programs nav li{
+            display:inline-block;
+             min-width:12em;
+            }
+            
+            .search-programs nav li li{
+                display:block;
+                color: black;
+                
+            }
+            
+            .search-programs nav li ul{
+                position:absolute;
+            }
+    
+    
+/*-----------breakpoint end------------------------------------------------------------------------------------*/  
+            
+            
+            
+            
+    
+            @media (min-width: 768px){
+                .show-menu{
+                    display: none;
+                }
+                .menu{
+                    display: flex;
+                }
+                .menu li{
+                    display: inline;
+                    margin-right:2em ;
+                }
+                .search-nav{
+                    margin-left: 3em;
+                    
+                }
+    
+                footer{
+                    padding: 10px;
+                }
+           /* }
+            .grid-container{
+                max-width: 1200px;   
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                grid-gap:10px;
+                padding: 2em;
+                position: center;
+                margin: auto;
+                justify-content:space-evenly;
+                
+                }
+                */
+            .card p{
+                    margin-bottom:  2em;
+                    justify-content:space-evenly;
+                
+               
+                }
+            .search-subtitle{
+                    padding:1em;
+                }
+
+            }
+                    
+            .animation q{
+            color:black;
+            max-width: 900px;   
+            display:block;
+            position:center;   
+            quotes: "“"  "”";
+            font-family: 'Montserrat', sans-serif;
+            font-size: 64px;
+            font-style: italic;
+            font-weight: 900;
+            margin-left: auto;
+            margin-right:auto;
+            padding-top: 2em;
+            
+            }
+            q::before {
+            content: open-quote;
+            }
+            q::after {
+            content: close-quote;
+            }
+            @media (min-width: 768px){
+                q{
+                    font-size: 48px;
+                    font-weight: 700;
+                    margin:0;
+                    max-width: 750px;
+                    padding:1em;
+                   
+                }
+            }
+            /*----------------------------------------------------------------------------------------------------
+
+                                                Animation-Design--- Credit https://codepen.io/ejgauci
+        ---------------------------------------------------------------------------------------------------*/
+            svg{ 
+            display: block;
+            position: relative;
+            max-width: 768px;
+            margin-bottom: 8em;
+            margin-top:0;
+            margin-left: 200px;
+
+        
+
+            stroke-width:8px;
+            stroke: grey;
+            stroke-dashoffset: -2000;
+            stroke-dasharray: 2000;
+            animation-name:design;
+            animation-iteration-count: infinite;
+            animation-duration: 5s;
+            animation-direction: alternate;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+
+            }
+
+            @keyframes design{
+            
+            0%{
+                stroke-dashoffset: -2000;
+                Stroke: blue;
+
+                
+                }
+            
+            50%{
+                
+                stroke: red;
+            }
+            
+            100%{
+                stroke-dashoffset: 0;
+                stroke: rgb(180, 107, 51);
+                
+            }
+        }
+/*---------breakpoint for svg-start--------------------------------------------------
+--------- NOTE: TODO: redesign negative space :(
+---------------------------------------------------*/
+            @media (min-width: 768px){
+                .animation q{
+                    font-size: 40px;
+                    margin-left: 60px;
+                }
+                svg{
+                    display: none;
+                    font-size: 60px;
+                    font-weight: 700;
+                    margin-bottom: 1em;
+                    margin-left: -60px;
+                    max-width: 675px;
+                   
+                }
+            }
+            
+/*----------------------------------------------------------------------------------------------------
+
+                                            Hero
+/*----------------------------------------------------------------------------------------------------*/
+           
+        
+        
+        .hero-banner {
+            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(107, 32, 90)),url(../assets/qcollege_resize1024.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            height: 100%;
+            max-width: 1200px;
+            min-height: 22em;
+            padding: 1em;
+            margin-bottom: 4em;
+
+        }
+        .hero-text a{
+            position: absolute;
+            top: 49%;
+            left: 40%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 36px;
+            
+            
+        }
+        .btn-apply a{
+            position: absolute;
+            top: 70%;
+            left:18% ;
+            width: 75px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 500;
+            border: 2px solid white;
+            border-radius: 25px;
+            padding: 15px;
+            color: honeydew;
+           
+            
+        }
+        .btn-apply a:hover{
+            background-color:  rgb(175, 38, 79);
+            box-shadow:  2px 2px 4px #350721, 
+             -2px -2px 4px #270b19;
+             border: none;
+        }
+/*---------breakpoint for hero banner start---------------------------------------------------*/
+        @media (min-width: 768px){
+            .hero-banner {
+               max-width: 768;
+                position: cover;
+            }
+            .hero-text a{
+                font-size: 32px;
+                width: 758px;
+                margin-left: 3.5em;
+                font-weight: 700;
+               
+            }
+        }
+/*---------breakpoint for hero banner end---------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------
+
+                                    Events & article section
+---------------------------------------------------------------------------------------------------------------------------*/
+        .event-item img{
+            width: 100%;
+            margin-bottom: 6em;
+
+        }
+        .event-detail p{
+            color:#141640 ;
+        }
+        .news h2{
+            color:#141640 ;
+            font-size: 24px;
+
+        }
+
+        .events h2{
+            color:#141640 ;
+            font-size: 24px;
+
+        }
+        .event-link {
+            margin: 0;
+        }
+        
+        .event-item img{
+            width: 100%;
+            margin-bottom: 6em;
+
+        }
+        .event-detail p{
+            color:#141640 ;
+        }
+        .news h2{
+            color:#141640 ;
+            font-size: 24px;
+
+        }
+
+        .events h2{
+            color:#141640 ;
+            font-size: 24px;
+
+        }
+        .event-link {
+            margin: 0;
+        }
+        
+
+        @media (min-width: 768px){
+            .show-menu{
+                display: none;
+            }
+            .menu{
+                display: flex;
+            }
+            .menu li{
+                display: inline;
+                margin-right:2em ;
+            }
+            .layout{
+                display: grid;
+                padding: 1em;
+                grid-template-columns: 2fr 1fr;
+                grid-column-gap: 3em;
+                margin-bottom: 4em;
+                
+            }
+            .news-link a{
+                padding-bottom:  1em;
+                margin-bottom: 2em;
+                color:#141640
+            }
+            .news-link a:hover{
+                color:grey;
+
+            }
+            .layout-heading{
+                margin: auto;
+                color:#141640;
+                line-height: 1.6;
+                padding-bottom: 2em;
+            
+            }
+            .layout p{
+                line-height: 1.6;
+            }
+            .hero-banner{
+                display: flex;
+            }
+            .hero-text{
+                display: inline;
+                padding: 1em;
+                margin: 2em;
+                align-items: center;
+                
+            }
+            .btn-apply{
+                display: block;
+                padding: 1em;
+                }
+                footer{
+                padding: 10px;
+            }
+            svg{
+                display: inline;
+            }
+        }
+    }
+     /*---------breakpoint start---for search programs-----------------------------------------------------------------------------------*/   
+     @media(max-width:768px){
+            
+        .search-programs nav li{
+        display:inline-block;
+         min-width:12em;
+        }
+        
+        .search-programs nav li li{
+            display:block;
+            color: black;
+            
+        }
+        
+        .search-programs nav li ul{
+            position:absolute;
+        }
+        .card{
+            margin-left: 100px ;
+            
+        }
+    }
+
+
+/*-----------breakpoint end------------------------------------------------------------------------------------*/  
+        
+        
+        
+        
+
+        @media (min-width: 768px){
+            .show-menu{
+                display: none;
+            }
+            .menu{
+                display: flex;
+            }
+            .menu li{
+                display: inline;
+                margin-right:2em ;
+            }
+            .search-nav{
+                margin-left: 3em;
+                
+            }
+
+            footer{
+                padding: 10px;
+            }
+        }
+        /*.layout{
+            display: grid;
+            padding: 1em;
+            grid-template-columns: 2fr 1fr;
+            column-gap: 2em;
+            margin-bottom: 4em;
+        }*/
+/*---------breakpoint for layout article section banner start--------------------
+        @media (min-width: 768px){
+            .news {
+                padding: 2em;
+                max-width: 765px;
+            }
+            .news h2 {
+                font-size: 32px;
+
+            }
+
+
+            .news-item p{
+                
+               
+                font-size: 19px;
+                line-height: 1.9em;
+
+               
+            }
+            .news-item a {
+                color:purple;
+                font-size: 22px;
+            }
+            .events{
+                padding: 2em;
+                max-width: 765px;
+                font-size: 24px;
+
+            }
+            .events h2{
+                font-size: 32px;
+                padding-bottom: 2em;
+
+            }
+            .event-item .poster{
+                width: 668px;
+                
+
+            }
+            .news-link a{
+                padding-bottom:  1em;
+                margin-bottom: 2em;
+                color:#141640
+            }
+            .news-link a:hover{
+                color:grey;
+
+            }
+            .layout-heading{
+                margin: auto;
+                color:#141640;
+                line-height: 1.6;
+                padding-bottom: 2em;
+            
+            }
+            .layout p{
+                line-height: 1.6;
+            }
+              
+            footer{
+                margin-left: 2em;
+                padding-top: 3em;
+
+            */
